@@ -7,9 +7,9 @@ MoonWalk is an interactive system for exploring and navigating video content thr
 
 | | |
 |:--:|:--:|
-| ![main.png](../assets/main.png) | ![panel.png](../assets/panel.png) |
+| ![main.png](assets/main.png) | ![panel.png](assets/panel.png) |
 | *Main Panel* | *Text Input Panel* |
-| ![topology.png](../assets/topology.png) | ![visualization.png](../assets/visualization.png) |
+| ![topology.png](assets/topology.png) | ![visualization.png](assets/visualization.png) |
 | *Topology* | *Visualization* |
 
 ## Dependencies
