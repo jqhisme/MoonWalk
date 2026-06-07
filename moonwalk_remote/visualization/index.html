@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonWalk - Visualization</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/"
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="header">
+        <div id="title-section">
+            <div id="main-title">MoonWalk - Visualization</div>
+            <div id="subtitle">Remote 3D Navigation View</div>
+        </div>
+        <div id="nav-buttons">
+            <a href="index.html" class="nav-button active">Visualization</a>
+            <a href="../topology/index.html" class="nav-button">Topology</a>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <!-- LEFT PANEL -->
+        <div id="left-panel">
+            <!-- 3D Scene -->
+            <div id="scene-container">
+                <!-- Three.js canvas will render here -->
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div id="right-panel">
+            <!-- No video element for visualization page -->
+            <div id="info-display">
+                <h3>Query History</h3>
+                <div id="detailed-history">
+                    <!-- Real-time query details will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+        import { getFirestore, collection, query, orderBy, limit, onSnapshot } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
+        
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB0dl3ceDjh4c4Jkc2TTTpXKERy0_wVhU4",
+            authDomain: "sharedmindsteaching.firebaseapp.com",
+            projectId: "sharedmindsteaching",
+            storageBucket: "sharedmindsteaching.firebasestorage.app",
+            messagingSenderId: "1034518385194",
+            appId: "1:1034518385194:web:a51227545957caa68de953"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        
+        // Export to global scope for use in script.js
+        window.firebaseDB = db;
+        window.firebaseCollection = collection;
+        window.firebaseQuery = query;
+        window.firebaseOrderBy = orderBy;
+        window.firebaseLimit = limit;
+        window.firebaseOnSnapshot = onSnapshot;
+    </script>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>

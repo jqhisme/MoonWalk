@@ -1,0 +1,228 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 600;
+}
+
+#grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    mix-blend-mode: color-dodge;
+    pointer-events: none;
+    z-index: 20;
+    object-fit: cover;
+}
+
+body {
+    font-family: "Anonymous Pro", monospace;
+    height: 100vh;
+    overflow: auto;
+    background-color: #01161a;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+#header {
+    height: 120px;
+    background-color: #01161aff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    position: relative;
+    z-index: 20;
+}
+
+#title-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#main-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#subtitle {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-button {
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-button.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+#main-container {
+    display: flex;
+    /*height: calc(100vh - 120px);*/
+    padding: 0 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+}
+
+#left-panel {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #fff;
+}
+
+#right-panel {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #fff;
+    border-left: none;
+}
+
+/* Left Panel Sections */
+#scene-container {
+    flex: 1;
+    background-color: #01161a40;
+    position: relative;
+    z-index: 15;
+}
+
+#text-history {
+    flex: 1;
+    overflow: hidden;
+    padding: 15px;
+    background-color: #01161a40;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 15;
+}
+
+.text-entry {
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+/* Right Panel Sections */
+#video-container {
+    flex: 1;
+    background-color: #01161a40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 15;
+}
+
+#video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#input-area {
+    flex: 0 0 150px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    background-color: #01161a40;
+    position: relative;
+    z-index: 15;
+}
+
+#input-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#user-input {
+    flex: 0.5;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+    font-family: "Anonymous Pro", monospace;
+    /* transparent background*/
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+    outline: none;
+}
+
+#user-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#input-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border: #fff solid 1px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Anonymous Pro", monospace;
+}
+
+#input-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Dial styling */
+#dial-container {
+    flex: 0 0 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+#dial {
+    width: 120px;
+    height: 120px;
+    user-select: none;
+}
+
+#dial-needle {
+    transition: transform 0.1s ease-out;
+    transform-origin: 100px 100px;
+}
+
+#dial-value {
+    margin-top: 8px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}

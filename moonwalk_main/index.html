@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonWalk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video id="grain-overlay" autoplay muted loop>
+        <source src="grain2.mp4" type="video/mp4">
+    </video>
+    
+    <div id="header">
+        <div id="title-section">
+            <div id="main-title">MoonWalk</div>
+            <div id="subtitle">Story Navigation via Textual Input</div>
+        </div>
+        <div id="nav-buttons">
+            <a href="index.html" class="nav-button active">Main</a>
+            <a href="topology/index.html" class="nav-button">Topology</a>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <!-- LEFT PANEL -->
+        <div id="left-panel">
+            <!-- 3D Scene -->
+            <div id="scene-container">
+                <!-- Three.js canvas will render here -->
+            </div>
+
+            <!-- Text History -->
+            <div id="text-history">
+                <div class="text-entry">Ready for input...</div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div id="right-panel">
+            <!-- Video Player -->
+            <div id="video-container">
+                <video muted id="main-video">
+                    <source src="footages.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- User Input -->
+            <div id="input-area">
+                <textarea id="user-input" placeholder="What do you want to see?
+Input single phrases or multiple phrases separated by semicolons"></textarea>
+                <button id="input-button">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script type="importmap">
+        {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/"
+        }
+        }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

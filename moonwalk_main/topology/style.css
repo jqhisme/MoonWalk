@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 600;
+}
+
+#grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    mix-blend-mode: color-dodge;
+    pointer-events: none;
+    z-index: 10;
+    object-fit: cover;
+}
+
+body {
+    font-family: "Anonymous Pro", monospace;
+    height: 100vh;
+    overflow: auto;
+    background-color: #01161a;
+    position: relative;
+    padding-bottom: 100px;
+}
+#subtitle {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+#header {
+    height: 120px;
+    background-color: #01161aFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 20;
+}
+
+#nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-button {
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-button.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+#main-container {
+    display: flex;
+    padding: 0 5%;
+    gap: 20px;
+    height: calc(100vh - 120px);
+    position: relative;
+    z-index: 15;
+}
+
+#left-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    border: 1px solid #fff;
+}
+
+#right-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #fff;
+}
+
+/* Scenes Grid */
+#scenes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.scene-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #0f1923;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.scene-container {
+    flex: 1;
+    min-height: 200px;
+    background-color: #01161a;
+    position: relative;
+}
+
+.scene-container canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.scene-info {
+    padding: 10px;
+    background-color: #0f1923;
+    color: white;
+    font-size: 12px;
+    word-wrap: break-word;
+    word-break: break-word;
+    min-height: 40px;
+}
+
+.video-name {
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.variance {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+}
+
+/* Right Panel */
+#info-area {
+    padding: 20px;
+    flex: 0 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#info-area h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#info-area p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.8;    /* This controls spacing between lines */
+    margin-bottom: 15px; /* This controls space between paragraphs */
+}
+
+#preview-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f1923;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#preview-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#preview-image.active {
+    opacity: 1;
+}

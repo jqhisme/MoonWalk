@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topology of Storytellings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="header">
+        <div id="title-section">
+            <div id="main-title">MoonWalk</div>
+            <div id="subtitle">Story Navigation via Textual Input</div>
+        </div>
+        <div id="nav-buttons">
+            <a href="../visualization/index.html" class="nav-button">Main</a>
+            <a href="index.html" class="nav-button active">Topology</a>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <!-- LEFT PANEL - 2x3 Grid of 3D Scenes -->
+        <div id="left-panel">
+            <div id="scenes-grid">
+                <div class="scene-item">
+                    <div class="scene-container" data-index="0"></div>
+                    <div class="scene-info">
+                        <div class="video-name"></div>
+                        <div class="variance"></div>
+                    </div>
+                </div>
+                <div class="scene-item">
+                    <div class="scene-container" data-index="1"></div>
+                    <div class="scene-info">
+                        <div class="video-name"></div>
+                        <div class="variance"></div>
+                    </div>
+                </div>
+                <div class="scene-item">
+                    <div class="scene-container" data-index="2"></div>
+                    <div class="scene-info">
+                        <div class="video-name"></div>
+                        <div class="variance"></div>
+                    </div>
+                </div>
+                <div class="scene-item">
+                    <div class="scene-container" data-index="3"></div>
+                    <div class="scene-info">
+                        <div class="video-name"></div>
+                        <div class="variance"></div>
+                    </div>
+                </div>
+                <div class="scene-item">
+                    <div class="scene-container" data-index="4"></div>
+                    <div class="scene-info">
+                        <div class="video-name"></div>
+                        <div class="variance"></div>
+                    </div>
+                </div>
+                <div class="scene-item">
+                    <div class="scene-container" data-index="5"></div>
+                    <div class="scene-info">
+                        <div class="video-name"></div>
+                        <div class="variance"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div id="right-panel">
+            <!-- Title and placeholder text -->
+            <div id="info-area">
+                <h2>Topology of Storytellings</h2>
+                <p>Have you ever tried to toggle the playback control of a film, trying to find a specific part you are looking for? If we consider the playback we can control as a linear projection of the story, the story itself may exist in much higher dimensions. There are so many possibilities of edit, dissemble, and reassemble a story, and these possibilities are perhaps lying and minging in a space that we might not be able to imagine. Moon Walk allows you to wander in this space using textual input, exploring can we get a vague understanding of the abstract information encoded in neural networks.</p>
+                <p>In this experiment, all films are being encoded into a coordinate with 1024 dimensions and reduced to 3 dimensions to be visualized on the screen. Every textual input will bring you to one of the coordinates, and a machine learning model will further bring you to one of the video clips in this space, disorienting and implicit, just like walking on the moon.</p>
+            </div>
+            
+            <!-- Preview Image Area -->
+            <div id="preview-container">
+                <img id="preview-image" src="" alt="Preview">
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/"
+        }
+        }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

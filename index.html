@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonWalk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video id="grain-overlay" autoplay muted loop>
+        <source src="grain2.mp4" type="video/mp4">
+    </video>
+    
+    <div id="header">
+        <div id="title-section">
+            <div id="main-title">MoonWalk</div>
+            <div id="subtitle">Story Navigation via Textual Input</div>
+        </div>
+        <div id="nav-buttons">
+            <a href="index.html" class="nav-button active">Main</a>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <!-- LEFT PANEL -->
+        <div id="left-panel">
+            <!-- Text History -->
+            <div id="text-history">
+                <div class="text-entry">Ready for input...</div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div id="right-panel">
+            <!-- Video Player -->
+            <div id="video-container">
+                <video muted id="main-video">
+                    <source src="footages.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- User Input -->
+            <div id="input-area">
+                <div id="input-wrapper">
+                    <textarea id="user-input" placeholder="What do you want to see?
+Input single phrases or multiple phrases separated by semicolons"></textarea>
+                    <button id="input-button">Submit</button>
+                </div>
+                <div id="dial-container">
+                    <svg id="dial" viewBox="0 0 200 200">
+                        <!-- Background circle -->
+                        <circle cx="100" cy="100" r="95" stroke="#fff" stroke-width="4" fill="none"/>
+                        
+                        <!-- Tick marks -->
+                        <g id="tick-marks" stroke="#fff" stroke-width="2" opacity="0.8">
+                            <line x1="100" y1="10" x2="100" y2="25" />
+                            <line x1="100" y1="175" x2="100" y2="190" />
+                            <line x1="10" y1="100" x2="25" y2="100" />
+                            <line x1="175" y1="100" x2="190" y2="100" />
+                        </g>
+    
+                        
+                        <!-- Indicator circle -->
+                        <circle id="dial-indicator" cx="100" cy="30" r="10" fill="#fff" opacity="0.9"/>
+                    </svg>
+                    <div id="dial-value">0°</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="firebase_config.js" type="module"></script>
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
