@@ -2,6 +2,7 @@
 
 Story Navigation via Textual Input
 
+
 MoonWalk is an interactive system for exploring and navigating video content through natural language queries. The system combines advanced video understanding models with intuitive 3D visualization to enable seamless story exploration.
 
 | | |
