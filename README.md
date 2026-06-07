@@ -18,6 +18,8 @@ MoonWalk is an interactive system for exploring and navigating video content thr
 - Conda
 - CUDA (recommended) 
 
+![architecture_diagram.png](assets/architecture_diagram.png)
+
 
 ## Running the System
 
